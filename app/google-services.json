@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "287908818909",
+    "project_id": "erasmus-1b9bf",
+    "storage_bucket": "erasmus-1b9bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287908818909:android:8e53c0d6de57f54902d034",
+        "android_client_info": {
+          "package_name": "com.example.erasmus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9RoiDXB50O0XvL2AtrOPUgXPneMUlRpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
