@@ -23,19 +23,27 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_signup)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        setContentView(binding.root)
+
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
-        //binding.sign
+        binding.signupButton.setOnClickListener {
+            val signupUsername = binding.signupUsername.text.toString()
+            val signupPassword = binding.signupPassword.text.toString()
+
+            if (signupUsername.isNotEmpty() && signupPassword.isNotEmpty()){
+                signupUser(signupUsername, signupPassword)
+            } else {
+                Toast.makeText(this@SignupActivity, "All fields are mandatory", Toast.LENGTH_SHORT).show()
+            }
+        }
+        binding.loginRedirect.setOnClickListener {
+            startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+            finish()
+        }
     }
 
-    private fun singupUser(username: String, password: String){
+    private fun signupUser(username: String, password: String){
         databaseReference.orderByChild("uername").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(!dataSnapshot.exists()){

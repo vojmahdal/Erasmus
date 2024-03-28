@@ -32,13 +32,35 @@
         android:id="@+id/textNfc"
         android:textSize="16sp"/>
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signupUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="message"
+        android:hint="Username"
         android:inputType="text"/>
 
-        
+    <EditText
+        android:id="@+id/signupPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signupButton"
+            android:text="SIGNUP"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Already registered? Login"
+            android:id="@+id/loginRedirect"
+            android:textSize="16sp"/>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
