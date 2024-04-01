@@ -1,4 +1,4 @@
-package com.example.erasmus
+package com.example.erasmus.database
 
 data class UserData(
     val id: String? = null,
