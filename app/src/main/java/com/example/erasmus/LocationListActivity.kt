@@ -26,7 +26,7 @@ class LocationListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_location_list)
-
+        firebaseDatabase = FirebaseDatabase.getInstance()
         locationRecyclerView = findViewById(R.id.locationList)
         locationRecyclerView.layoutManager = LinearLayoutManager(this)
         locationRecyclerView.setHasFixedSize(true)
@@ -44,6 +44,7 @@ class LocationListActivity : AppCompatActivity() {
 
                         val location = locationSnapshot.getValue(LocationData::class.java)
                         locationArrayList.add(location!!)
+
                     }
                     locationRecyclerView.adapter = Adapter(locationArrayList)
                 }

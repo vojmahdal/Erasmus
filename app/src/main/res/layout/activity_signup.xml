@@ -47,6 +47,14 @@
         android:hint="Password"
         android:inputType="textPassword"/>
 
+    <EditText
+        android:id="@+id/signupConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
