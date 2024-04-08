@@ -40,5 +40,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        binding.mainProfile.setOnClickListener {
+            val intent = Intent(this@MainActivity, ActivityProfile::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

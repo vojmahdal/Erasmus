@@ -63,6 +63,20 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-auth")
 
+    // Add the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-storage")
+
+
+    //circular imageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //cropper
+   /* implementation("com.theartofdev.edmodo:android-image-cropper:2.8.0")
+    implementation ("com.squareup.picasso:picasso:2.5.2")
+*/
+    implementation("com.theartofdev.edmodo:android-image-cropper:2.8.0")
+
 
 
 

@@ -25,20 +25,12 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-       /* firebaseDatabase = FirebaseDatabase.getInstance()
-        databaseReference = firebaseDatabase.reference.child("users")
-*/
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.loginButton.setOnClickListener {
             val loginUsername = binding.loginUsername.text.toString()
             val loginPassword = binding.loginPassword.text.toString()
 
-           /* if (loginUsername.isNotEmpty() && loginPassword.isNotEmpty()){
-                loginUser(loginUsername, loginPassword)
-            } else {
-                Toast.makeText(this@LoginActivity, "All fields are mandatory", Toast.LENGTH_SHORT).show()
-            }*/
             loginEmail(loginUsername, loginPassword)
         }
         binding.signupRedirect.setOnClickListener {
@@ -69,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Empty fields are not allowed", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     private fun loginUser(username: String, password: String){
         databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener{
