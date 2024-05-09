@@ -53,7 +53,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+
+    implementation("com.google.firebase:firebase-appcheck-debug")
+
 
     // Add the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
@@ -76,6 +79,7 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.5.2")
 */
     implementation("com.theartofdev.edmodo:android-image-cropper:2.8.0")
+
 
 
 
