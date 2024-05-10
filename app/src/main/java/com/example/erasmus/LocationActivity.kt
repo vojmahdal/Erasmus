@@ -1,6 +1,8 @@
 package com.example.erasmus
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -11,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.erasmus.database.LocationData
 import com.example.erasmus.databinding.ActivityLocationBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
 class LocationActivity : AppCompatActivity() {
@@ -28,13 +31,45 @@ class LocationActivity : AppCompatActivity() {
         initView()
         setValuestToViews()
 
+        binding.updateButton.visibility = View.GONE
+        binding.deleteButton.visibility = View.GONE
+
+        val createdBy = FirebaseAuth.getInstance().uid.toString()
+        val userId = intent.getStringExtra("lCreatedBy").toString()
+        if (userId == createdBy){
+            binding.updateButton.visibility = View.VISIBLE
+            binding.deleteButton.visibility = View.VISIBLE
+        }
         binding.updateButton.setOnClickListener {
             openUpdateDialog(
                 intent.getStringExtra("lId").toString(),
                 intent.getStringExtra("lName").toString()
             )
         }
+        binding.deleteButton.setOnClickListener {
+            deleteRecord(
+                intent.getStringExtra("lId").toString()
+            )
+        }
     }
+
+    private fun deleteRecord(
+        id: String
+    ){
+        val dbRef = FirebaseDatabase.getInstance().getReference("Location Information").child(id)
+        val mTask = dbRef.removeValue()
+
+        mTask.addOnSuccessListener {
+            Toast.makeText(this, "Location data deleted", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LocationListActivity::class.java)
+            finish()
+            startActivity(intent)
+        }.addOnFailureListener {error ->
+            Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_SHORT).show()
+
+        }
+    }
+
     private fun initView(){
 
     }
@@ -57,7 +92,6 @@ class LocationActivity : AppCompatActivity() {
         val etLCity = mDialogView.findViewById<EditText>(R.id.uploadLocationCity)
         val etLCountry = mDialogView.findViewById<EditText>(R.id.uploadLocationCountry)
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.saveButton)
-
 
         etLName.setText(intent.getStringExtra("lName").toString())
         etLCity.setText(intent.getStringExtra("lCity").toString())

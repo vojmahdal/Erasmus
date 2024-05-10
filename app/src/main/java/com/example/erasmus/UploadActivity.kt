@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.erasmus.database.LocationData
 import com.example.erasmus.databinding.ActivityUploadBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -37,7 +38,8 @@ class UploadActivity : AppCompatActivity() {
             databaseReference = FirebaseDatabase.getInstance().getReference("Location Information")
 
             val locationId = databaseReference.push().key!!
-            val locationData = LocationData(locationId, locationName, locationCountry, locationCity, locationGps, createdBy = null)
+            val createdBy = FirebaseAuth.getInstance().uid.toString()
+            val locationData = LocationData(locationId, locationName, locationCountry, locationCity, locationGps, createdBy)
             databaseReference.child(locationId).setValue(locationData).addOnSuccessListener {
                 binding.uploadLocationName.text.clear()
                 binding.uploadLocationCountry.text.clear()

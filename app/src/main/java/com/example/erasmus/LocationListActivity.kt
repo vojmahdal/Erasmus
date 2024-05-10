@@ -69,6 +69,7 @@ class LocationListActivity : AppCompatActivity() {
                             intent.putExtra("lCountry",locationArrayList[position].locationCountry)
                             intent.putExtra("lCity",locationArrayList[position].locationCity)
                             intent.putExtra("lGps",locationArrayList[position].locationGps)
+                            intent.putExtra("lCreatedBy",locationArrayList[position].createdBy)
                             startActivity(intent)
                         }
 
