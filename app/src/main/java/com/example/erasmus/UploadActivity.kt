@@ -32,9 +32,13 @@ class UploadActivity : AppCompatActivity() {
             val locationCity = binding.uploadLocationCity.text.toString()
             val locationGps = binding.uploadLocationGPS.text.toString()
 
+
+
             databaseReference = FirebaseDatabase.getInstance().getReference("Location Information")
-            val locationData = LocationData(locationName, locationCountry, locationCity, locationGps, createdBy = null)
-            databaseReference.child(locationName).setValue(locationData).addOnSuccessListener {
+
+            val locationId = databaseReference.push().key!!
+            val locationData = LocationData(locationId, locationName, locationCountry, locationCity, locationGps, createdBy = null)
+            databaseReference.child(locationId).setValue(locationData).addOnSuccessListener {
                 binding.uploadLocationName.text.clear()
                 binding.uploadLocationCountry.text.clear()
                 binding.uploadLocationCity.text.clear()

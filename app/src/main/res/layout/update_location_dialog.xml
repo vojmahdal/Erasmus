@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="160dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter Location name"
+            android:id="@+id/uploadLocationName"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:gravity="start|center_horizontal"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter Location country"
+            android:id="@+id/uploadLocationCountry"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:gravity="start|center_horizontal"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter Location city"
+            android:id="@+id/uploadLocationCity"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:gravity="start|center_horizontal"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter Location GPS"
+            android:id="@+id/uploadLocationGPS"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:gravity="start|center_horizontal"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Update"
+            android:id="@+id/saveButton"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            />
+    </LinearLayout>
+</LinearLayout>
