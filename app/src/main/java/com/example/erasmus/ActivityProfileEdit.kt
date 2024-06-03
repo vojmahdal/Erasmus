@@ -97,6 +97,8 @@ class ActivityProfileEdit : AppCompatActivity() {
                 databaseReference.child(uid).setValue(profile).addOnCompleteListener {
                     if(it.isSuccessful){
                         uploadProfilePic()
+                        startActivity(Intent(this@ActivityProfileEdit, MainActivity::class.java))
+                        finish()
                     }else{
                         Toast.makeText(this@ActivityProfileEdit, "Failed", Toast.LENGTH_SHORT).show()
                     }
