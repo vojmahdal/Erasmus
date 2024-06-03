@@ -12,7 +12,7 @@
     <Button
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="logout"
+        android:text="@string/logout"
         android:id="@+id/mainLogout"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
@@ -22,8 +22,18 @@
     <Button
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="profile"
+        android:text="@string/profile"
         android:id="@+id/mainProfile"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="0dp"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/settings"
+        android:id="@+id/mainSettings"
         android:textSize="18sp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
@@ -33,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
     <TextView
@@ -48,7 +58,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="find"
+            android:text="@string/find"
             android:id="@+id/mainFind"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -60,7 +70,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="upload"
+            android:text="@string/upload"
             android:id="@+id/mainUpload"
             android:textSize="18sp"
             android:layout_marginTop="20dp"

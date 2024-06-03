@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Erasmus</string>
+    <string name="login">Login</string>
+
+
+    <string name="logout">Odhlásit se</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Nastavení</string>
+    <string name="find">Najít</string>
+    <string name="upload">Nahrát</string>
+</resources>
