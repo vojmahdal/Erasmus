@@ -63,6 +63,12 @@ class ActivityProfile : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.navigateButton.setOnClickListener {
+            val intent = Intent(this@ActivityProfile, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
     private fun getUserData(){
         showProgressBar()

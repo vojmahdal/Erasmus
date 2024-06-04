@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".ActivityProfileEdit">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,6 +16,7 @@
         android:layout_margin="24dp"
         android:gravity="center"
         android:orientation="vertical">
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
@@ -28,6 +31,8 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints" />
 
+
+
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
@@ -36,6 +41,7 @@
         android:inputType="text"
         android:hint="Name"
         tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editBio"
         android:layout_width="wrap_content"
@@ -45,14 +51,26 @@
         android:hint="Bio"
         tools:ignore="MissingConstraints" />
 
-    <Button
+        <Button
         android:id="@+id/acceptButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OK"
         tools:ignore="MissingConstraints" />
 
+        <Button
+            android:id="@+id/navigateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
     </LinearLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>
 

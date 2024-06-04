@@ -107,6 +107,12 @@ class ActivityProfileEdit : AppCompatActivity() {
 
         }
 
+        binding.navigateButton.setOnClickListener {
+            val intent = Intent(this@ActivityProfileEdit, ActivityProfile::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
     private fun uploadProfilePic(){
        // imageUri = Uri.parse("android.resource://$packageName/${R.drawable.profile}")
