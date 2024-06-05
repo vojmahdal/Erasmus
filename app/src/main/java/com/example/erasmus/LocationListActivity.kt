@@ -3,6 +3,7 @@ package com.example.erasmus
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,6 @@ import com.google.firebase.database.ValueEventListener
 class LocationListActivity : AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var firebaseDatabase: FirebaseDatabase
-
     private lateinit var locationRecyclerView: RecyclerView
     private lateinit var locationArrayList : ArrayList<LocationData>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +37,12 @@ class LocationListActivity : AppCompatActivity() {
 
         locationArrayList = arrayListOf<LocationData>()
         getLocationData()
+
+        val backButton = findViewById<Button>(R.id.navigateButton)
+        backButton.setOnClickListener{
+            val Intent = Intent(this,MainActivity::class.java)
+            startActivity(Intent)
+        }
     }
     private fun getLocationData(){
         locationRecyclerView.visibility = View.GONE

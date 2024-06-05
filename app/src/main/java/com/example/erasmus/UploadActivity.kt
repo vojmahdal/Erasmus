@@ -53,5 +53,11 @@ class UploadActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.navigateButton.setOnClickListener {
+            val intent = Intent(this@UploadActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

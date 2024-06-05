@@ -66,7 +66,11 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
-
+        val backBtn = findViewById<Button>(R.id.navigateButton)
+        backBtn.setOnClickListener{
+            val Intent = Intent(this,MainActivity::class.java)
+            startActivity(Intent)
+        }
 
     }
 
