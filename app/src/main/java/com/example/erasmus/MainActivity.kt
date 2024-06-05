@@ -51,15 +51,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        binding.mainProfile.setOnClickListener {
-            val intent = Intent(this@MainActivity, ActivityProfile::class.java)
-            startActivity(intent)
-            finish()
-        }
-        binding.mainSettings.setOnClickListener {
-            val intent = Intent(this@MainActivity, SettingsActivity::class.java)
-            startActivity(intent)
-            finish()
+
+        binding.navView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.profile -> {
+                    val intent = Intent(this@MainActivity, ActivityProfile::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                R.id.settings -> {
+                    val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                else -> false
+            }
         }
     }
 
