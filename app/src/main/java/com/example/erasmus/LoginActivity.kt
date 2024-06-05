@@ -61,30 +61,4 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Empty fields are not allowed", Toast.LENGTH_SHORT).show()
         }
     }
-
-
-    private fun loginUser(username: String, password: String){
-        databaseReference.orderByChild("username").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for (userSnapshot in dataSnapshot.children){
-                        val userData = userSnapshot.getValue(UserData::class.java)
-
-                        if(userData != null && userData.password == password){
-                            Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_LONG).show()
-                            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                            finish()
-                            return
-                        }
-                    }
-                }
-                Toast.makeText(this@LoginActivity, "Login failed", Toast.LENGTH_LONG).show()
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@LoginActivity, "Database Error: ${databaseError.message}", Toast.LENGTH_LONG).show()
-
-            }
-        })
-    }
 }

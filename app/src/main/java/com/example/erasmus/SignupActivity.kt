@@ -27,18 +27,12 @@ class SignupActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-       /* firebaseDatabase = FirebaseDatabase.getInstance()
-        databaseReference = firebaseDatabase.reference.child("users")
-       */
+
         binding.signupButton.setOnClickListener {
             val signupUsername = binding.signupUsername.text.toString()
             val signupPassword = binding.signupPassword.text.toString()
             val signupConfirm = binding.signupConfirmPassword.text.toString()
-       /*     if (signupUsername.isNotEmpty() && signupPassword.isNotEmpty()){
-                signupUser(signupUsername, signupPassword)
-            } else {
-                Toast.makeText(this@SignupActivity, "All fields are mandatory", Toast.LENGTH_SHORT).show()
-            }*/
+
             signupEmail(signupUsername, signupPassword, signupConfirm)
         }
         binding.loginRedirect.setOnClickListener {
@@ -67,25 +61,5 @@ class SignupActivity : AppCompatActivity() {
 
         }
     }
-    private fun signupUser(username: String, password: String){
-        databaseReference.orderByChild("uername").equalTo(username).addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if(!dataSnapshot.exists()){
-                    val id = databaseReference.push().key
-                    val userData = UserData(id, username, password)
-                    databaseReference.child(id!!).setValue(userData)
-                    Toast.makeText(this@SignupActivity, "Signup successful", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
-                    finish()
-                }else{
-                    Toast.makeText(this@SignupActivity, "User already exists", Toast.LENGTH_SHORT).show()
 
-                }
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                Toast.makeText(this@SignupActivity, "Database Error: ${databaseError.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
 }
