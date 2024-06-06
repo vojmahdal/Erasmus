@@ -42,6 +42,7 @@ class LocationListActivity : AppCompatActivity() {
         backButton.setOnClickListener{
             val Intent = Intent(this,MainActivity::class.java)
             startActivity(Intent)
+            finish()
         }
     }
     private fun getLocationData(){

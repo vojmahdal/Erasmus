@@ -58,13 +58,13 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this@MainActivity, ActivityProfile::class.java)
                     startActivity(intent)
                     finish()
-                    true
+                    false
                 }
                 R.id.settings -> {
                     val intent = Intent(this@MainActivity, SettingsActivity::class.java)
                     startActivity(intent)
                     finish()
-                    true
+                    false
                 }
                 else -> false
             }
