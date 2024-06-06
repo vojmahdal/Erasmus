@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="text"/>
 
         <EditText
@@ -44,21 +44,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/loginButton"
-            android:text="LOGIN"
+            android:text="@string/login"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="Not yet registered? Signup"
+            android:text="@string/not_yet_registered_signup"
             android:id="@+id/signupRedirect"
             android:textSize="16sp"/>
 

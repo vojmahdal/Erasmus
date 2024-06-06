@@ -20,7 +20,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter Location name"
+            android:hint="@string/hint_lname"
             android:id="@+id/uploadLocationName"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
@@ -30,7 +30,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter Location country"
+            android:hint="@string/hint_lcountry"
             android:id="@+id/uploadLocationCountry"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
@@ -40,7 +40,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter Location city"
+            android:hint="@string/hint_lcity"
             android:id="@+id/uploadLocationCity"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
@@ -50,7 +50,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter Location GPS"
+            android:hint="@string/hint_lgps"
             android:id="@+id/uploadLocationGPS"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
@@ -61,7 +61,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Save"
+            android:text="@string/save"
             android:id="@+id/saveButton"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -73,7 +73,7 @@
             android:id="@+id/navigateButton"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Back"
+            android:text="@string/back"
             android:textSize="18sp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"/>

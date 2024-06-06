@@ -9,4 +9,31 @@
     <string name="settings">Settings</string>
     <string name="find">Find</string>
     <string name="upload">Upload</string>
+
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="sel_theme">Select Theme</string>
+
+
+    <string name="hint_lname">location name</string>
+    <string name="hint_lcountry">location country</string>
+    <string name="hint_lcity">location city</string>
+    <string name="hint_lgps">location gps</string>
+
+    <string name="lcardname">Name:</string>
+    <string name="lcardcountry">Country:</string>
+
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="name">Name</string>
+    <string name="bio">Bio</string>
+    <string name="signup">Signup</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
+    <string name="already_registered_login">Already registered? Login</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="device_theme">Device Theme</string>
+    <string name="edit">Edit</string>
+    <string name="not_yet_registered_signup">Not yet registered? Signup</string>
 </resources>

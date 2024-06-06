@@ -8,4 +8,31 @@
     <string name="settings">Nastavení</string>
     <string name="find">Najít</string>
     <string name="upload">Nahrát</string>
+
+    <string name="back">Zpět</string>
+    <string name="save">Uložit</string>
+    <string name="sel_theme">Zvolit režim zobrazení</string>
+
+    <string name="hint_lname">název lokace</string>
+    <string name="hint_lcountry">země lokace</string>
+    <string name="hint_lcity">město lokace</string>
+    <string name="hint_lgps">souřadnice lokace</string>
+
+    <string name="lcardname">Název:</string>
+    <string name="lcardcountry">Země:</string>
+
+    <string name="update">Aktualizovat</string>
+    <string name="delete">Smazat</string>
+
+    <string name="name">Jméno</string>
+    <string name="bio">bio</string>
+    <string name="signup">Registrovat se</string>
+    <string name="username">E-mail</string>
+    <string name="password">Heslo</string>
+    <string name="already_registered_login">Jste již zaregistrován? Přihlašte se</string>
+    <string name="light_theme">Světlý režim</string>
+    <string name="dark_theme">Tmavý režim</string>
+    <string name="device_theme">Režim zařízení</string>
+    <string name="edit">Editovat</string>
+    <string name="not_yet_registered_signup">Nejste registrován? Zaregistrujte se</string>
 </resources>

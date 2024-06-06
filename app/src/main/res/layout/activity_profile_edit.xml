@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Name"
+        android:hint="@string/name"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Bio"
+        android:hint="@string/bio"
         tools:ignore="MissingConstraints" />
 
         <Button
@@ -62,7 +62,7 @@
             android:id="@+id/navigateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="@string/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
